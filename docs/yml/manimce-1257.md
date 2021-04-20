@@ -40,6 +40,16 @@ Next, another large package that we could cache was the Poetry venv, which would
 ```
 
 Another large package that the software depends on is TinyTeX. The Windows builds already had TinyTeX cached, so I only had to do it for macOS (Linux was fast enough to not need caching). The process was similar, just needed to translate Windows PowerShell to Bash.
+- https://linux.die.net/man/1/mkdir - `mkdir` manual, make directory
+  - `-p` flag to create parent directories if they don't already exist
+- https://linux.die.net/man/1/curl - `curl` manual, transfer data from URL
+  - `-L` flag to follow redirect and redo request if content has moved to a different location
+  - `-o` flag for target output
+- https://linux.die.net/man/1/tar - `tar` manual, archiving
+  - `x` flag for extracting
+  - `z` flag for filtering archive through gzip
+  - `f` flag to archive to specified file
+  - `-C` flag to change to specified target directory
 ```yml
 - name: Setup macOS cache
   id: cache-macos
