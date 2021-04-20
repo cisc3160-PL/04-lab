@@ -48,11 +48,13 @@ class Mobject(Container):
     def add_to_back(self, *mobjects: "Mobject") -> "Mobject":
         ...
         # Make sure Mobject does not contain self
+        # Raise exception if it does
         
         # Make sure mobject is type Mobject
+        # Raise exception if mobject is not Mobject
 
         # Make sure no submobject gets added twice
- 
+        # Filter the incoming mobjects before adding to the list
     ...
 ```
 
